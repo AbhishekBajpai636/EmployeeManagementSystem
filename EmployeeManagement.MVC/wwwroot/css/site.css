@@ -1,0 +1,157 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* =========================
+   Employee Navbar
+========================= */
+
+.employee-navbar {
+    min-height: 68px;
+    margin-bottom: 24px !important;
+    background: #ffffff;
+}
+
+.employee-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #17233c !important;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 35px;
+}
+
+    .employee-brand:hover {
+        color: #315bea !important;
+    }
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9f0ff;
+    color: #315bea;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+
+/* Menu Links */
+
+.employee-nav-link {
+    display: flex !important;
+    align-items: center;
+    gap: 7px;
+    color: #667085 !important;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 9px 13px !important;
+    border-radius: 8px;
+    transition: all .2s ease;
+}
+
+    .employee-nav-link:hover {
+        color: #315bea !important;
+        background: #f1f4ff;
+    }
+
+    .employee-nav-link i {
+        font-size: 15px;
+    }
+
+
+/* Profile */
+
+.profile-nav-link {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    color: #475467 !important;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 7px 12px !important;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+    .profile-nav-link:hover {
+        color: #315bea !important;
+        background: #f1f4ff;
+    }
+
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9f0ff;
+    color: #315bea;
+    border-radius: 50%;
+}
+
+
+/* Logout */
+
+.logout-nav-link {
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+    color: #df3f55 !important;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 9px 13px !important;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+    .logout-nav-link:hover {
+        background: #fff0f2;
+        color: #c92f45 !important;
+    }
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .employee-brand {
+        margin-right: 0;
+        font-size: 16px;
+    }
+
+    .employee-navbar .navbar-collapse {
+        padding: 12px 0;
+    }
+
+    .employee-navbar .navbar-nav {
+        align-items: stretch !important;
+    }
+
+    .profile-nav-link,
+    .logout-nav-link {
+        margin-top: 3px;
+    }
+}

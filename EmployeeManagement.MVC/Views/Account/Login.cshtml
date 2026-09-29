@@ -1,0 +1,106 @@
+﻿@model EmployeeManagement.Common.DTOs.LoginRequestDTO
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Login</title>
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+
+<body style="background:#f5f7fb;">
+
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+
+        <div class="card shadow-lg border-0 rounded-4" style="width:430px;">
+
+            <div class="card-body p-5">
+
+                <h2 class="text-center mb-4">
+                    Employee Management
+                </h2>
+
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger">
+                        @ViewBag.Error
+                    </div>
+                }
+
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success">
+                        @TempData["Success"]
+                    </div>
+                }
+
+                <form asp-action="Login" method="post">
+
+                    <div class="mb-3">
+
+                        <label>Email</label>
+
+                        <input asp-for="Email"
+                               class="form-control"
+                               placeholder="Enter Email" />
+
+                        <span asp-validation-for="Email"
+                              class="text-danger"></span>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label>Password</label>
+
+                        <input asp-for="Password"
+                               type="password"
+                               class="form-control"
+                               placeholder="Enter Password" />
+
+                        <span asp-validation-for="Password"
+                              class="text-danger"></span>
+
+                    </div>
+
+                    <button class="btn btn-primary w-100">
+                        Login
+                    </button>
+
+                </form>
+
+                <hr>
+
+                <div class="text-center">
+
+                    Don't have an account?
+
+                    <a asp-action="Register">
+                        Register
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <partial name="_ValidationScriptsPartial" />
+
+</body>
+
+</html>

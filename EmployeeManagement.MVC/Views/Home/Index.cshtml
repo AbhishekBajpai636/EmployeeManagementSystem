@@ -1,0 +1,186 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard-wrapper">
+
+    <div class="container">
+
+        <!-- Welcome Banner -->
+        <div class="welcome-banner">
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+                    <div class="welcome-text mb-2">
+                        👋 Welcome back!
+                    </div>
+
+                    <h2>Employee Dashboard</h2>
+
+                    <p>
+                        Here's an overview of your employees and key statistics.
+                    </p>
+                </div>
+
+                <div class="col-md-4 text-md-end">
+                    <a asp-action="Profile"
+                       asp-controller="Account"
+                       class="profile-btn">
+                        <i class="bi bi-person-circle me-1"></i>
+                        My Profile
+                        <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Statistics -->
+        <div class="row g-4 mb-4">
+
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <div>
+                            <div class="stat-title">
+                                Total Employees
+                            </div>
+
+                            <p class="stat-value" id="totalEmployees">
+                                0
+                            </p>
+                        </div>
+
+                        <div class="stat-icon icon-blue">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <div>
+                            <div class="stat-title">
+                                Active Employees
+                            </div>
+
+                            <p class="stat-value" id="activeEmployees">
+                                0
+                            </p>
+                        </div>
+
+                        <div class="stat-icon icon-green">
+                            <i class="bi bi-person-check-fill"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <div>
+                            <div class="stat-title">
+                                Inactive Employees
+                            </div>
+
+                            <p class="stat-value" id="inactiveEmployees">
+                                0
+                            </p>
+                        </div>
+
+                        <div class="stat-icon icon-red">
+                            <i class="bi bi-person-x-fill"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Recent Employees -->
+        <div class="employee-card">
+
+            <div class="employee-header">
+
+                <div class="d-flex justify-content-between align-items-center">
+
+                    <div>
+                        <h5>
+                            <i class="bi bi-people me-2"></i>
+                            Recent Employees
+                        </h5>
+
+                        <p>
+                            Latest employees added to the system.
+                        </p>
+                    </div>
+
+                    <a asp-controller="Employee"
+                       asp-action="Index"
+                       class="view-all-btn">
+                        View All
+                        <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table class="table employee-table">
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Designation</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="recentEmployeesBody">
+
+                        <tr>
+                            <td colspan="5" class="text-center py-4 text-muted">
+                                Loading employees...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Styles {
+    <link rel="stylesheet"
+          href="~/css/dashboard.css"
+          asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/dashboard.js"
+            asp-append-version="true"></script>
+}

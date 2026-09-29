@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EmployeeManagement.MVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/EmployeeManagement.MVC.styles.css" asp-append-version="true" />
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom shadow-sm employee-navbar">
+            <div class="container-fluid px-4">
+
+                <!-- Brand -->
+                <a class="navbar-brand employee-brand"
+                   asp-area=""
+                   asp-controller="Home"
+                   asp-action="Index">
+
+                    <span class="brand-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </span>
+
+                    <span>Employee Management</span>
+                </a>
+
+
+                <!-- Mobile Button -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <!-- Menu -->
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+                    <ul class="navbar-nav align-items-sm-center gap-1">
+
+                        <li class="nav-item">
+                            <a class="nav-link employee-nav-link"
+                               asp-area=""
+                               asp-controller="Home"
+                               asp-action="Index">
+
+                                <i class="bi bi-grid-1x2-fill"></i>
+                                Home
+
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link employee-nav-link"
+                               asp-area=""
+                               asp-controller="Home"
+                               asp-action="Privacy">
+
+                                <i class="bi bi-shield-check"></i>
+                                Privacy
+
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link employee-nav-link"
+                               asp-controller="Employee"
+                               asp-action="Index">
+
+                                <i class="bi bi-people-fill"></i>
+                                Employees
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <!-- Right Side -->
+                    <ul class="navbar-nav align-items-sm-center gap-1">
+
+                        <li class="nav-item">
+                            <a class="nav-link profile-nav-link"
+                               asp-action="Profile"
+                               asp-controller="Account">
+
+                                <span class="profile-icon">
+                                    <i class="bi bi-person-fill"></i>
+                                </span>
+
+                                My Profile
+
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link logout-nav-link"
+                               asp-area=""
+                               asp-controller="Account"
+                               asp-action="Logout">
+
+                                <i class="bi bi-box-arrow-right"></i>
+                                Logout
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2026 - EmployeeManagement.MVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
