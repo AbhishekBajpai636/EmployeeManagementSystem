@@ -1,0 +1,204 @@
+﻿@{
+    ViewData["Title"] = "Employees";
+}
+
+<div class="employees-wrapper">
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="page-header">
+
+            <div>
+                <div class="page-subtitle">
+                    <i class="bi bi-people-fill me-1"></i>
+                    Employee Management
+                </div>
+
+                <h2>Employees</h2>
+
+                <p>Manage employees and their information.</p>
+            </div>
+
+            <button class="add-employee-btn" onclick="openCreateModal()">
+                <i class="bi bi-plus-lg me-1"></i>
+                Add Employee
+            </button>
+
+        </div>
+
+
+        <!-- Employee Table -->
+        <div class="employee-card">
+
+            <div class="employee-header">
+
+                <div>
+                    <h5>
+                        <i class="bi bi-people me-2"></i>
+                        All Employees
+                    </h5>
+
+                    <p>
+                        View, edit and manage all employees.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table class="table employee-table">
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Department</th>
+                            <th>Designation</th>
+                            <th>Salary</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="employeeTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Employee Modal -->
+<div class="modal fade" id="employeeModal" tabindex="-1">
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content employee-modal">
+
+            <div class="modal-header">
+
+                <div>
+                    <h5 class="modal-title" id="modalTitle">
+                        Add Employee
+                    </h5>
+
+                    <small class="text-muted">
+                        Enter employee information
+                    </small>
+                </div>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <input type="hidden" id="employeeId" />
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <label class="form-label">Name</label>
+                        <input id="name" class="form-control" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Email</label>
+                        <input id="email"
+                               type="email"
+                               class="form-control" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Phone</label>
+                        <input id="phone" class="form-control" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Department</label>
+                        <input id="department" class="form-control" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Designation</label>
+                        <input id="designation" class="form-control" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Joining Date</label>
+                        <input id="joiningDate"
+                               type="date"
+                               class="form-control" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Salary</label>
+                        <input id="salary"
+                               type="number"
+                               class="form-control" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Status</label>
+
+                        <select id="isActive"
+                                class="form-select">
+
+                            <option value="true">Active</option>
+                            <option value="false">Inactive</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button class="btn btn-light"
+                        data-bs-dismiss="modal">
+                    Cancel
+                </button>
+
+                <button class="save-employee-btn"
+                        onclick="saveEmployee()">
+                    <i class="bi bi-check-lg me-1"></i>
+                    Save Employee
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+@section Styles {
+    <link rel="stylesheet"
+          href="~/css/employee.css"
+          asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/employee.js"
+            asp-append-version="true"></script>
+}

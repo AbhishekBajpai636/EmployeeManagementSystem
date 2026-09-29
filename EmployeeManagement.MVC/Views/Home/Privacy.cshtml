@@ -1,0 +1,164 @@
+﻿@* @{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p> *@
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<style>
+    .privacy-wrapper {
+        background: #f5f7fb;
+        min-height: calc(100vh - 120px);
+        padding: 40px 0;
+    }
+
+    .privacy-card {
+        background: #fff;
+        border-radius: 18px;
+        border: 1px solid #edf0f5;
+        box-shadow: 0 8px 25px rgba(25, 42, 70, 0.06);
+        overflow: hidden;
+    }
+
+    .privacy-header {
+        background: linear-gradient(135deg, #315bea, #6c8cff);
+        color: white;
+        padding: 32px;
+    }
+
+        .privacy-header h2 {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .privacy-header p {
+            margin: 0;
+            opacity: .9;
+        }
+
+    .privacy-content {
+        padding: 32px;
+    }
+
+    .privacy-section {
+        margin-bottom: 25px;
+    }
+
+        .privacy-section h5 {
+            color: #17233c;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .privacy-section p {
+            color: #667085;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+    .privacy-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: #e9f0ff;
+        color: #315bea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+</style>
+
+
+<div class="privacy-wrapper">
+
+    <div class="container">
+
+        <div class="privacy-card">
+
+            <div class="privacy-header">
+                <div class="privacy-icon bg-white text-primary">
+                    <i class="bi bi-shield-lock-fill"></i>
+                </div>
+
+                <h2>Privacy Policy</h2>
+
+                <p>
+                    Learn how Employee Management System handles and protects your information.
+                </p>
+            </div>
+
+
+            <div class="privacy-content">
+
+                <div class="privacy-section">
+
+                    <h5>
+                        <i class="bi bi-info-circle me-2 text-primary"></i>
+                        Information We Collect
+                    </h5>
+
+                    <p>
+                        We may collect information required to create and manage
+                        employee accounts and provide the functionality of this application.
+                    </p>
+
+                </div>
+
+
+                <div class="privacy-section">
+
+                    <h5>
+                        <i class="bi bi-lock me-2 text-primary"></i>
+                        Data Security
+                    </h5>
+
+                    <p>
+                        User credentials and application data are handled using
+                        appropriate security mechanisms to help protect sensitive information.
+                    </p>
+
+                </div>
+
+
+                <div class="privacy-section">
+
+                    <h5>
+                        <i class="bi bi-person-check me-2 text-primary"></i>
+                        User Information
+                    </h5>
+
+                    <p>
+                        Information associated with your account is used only for
+                        authentication and application-related functionality.
+                    </p>
+
+                </div>
+
+
+                <div class="privacy-section mb-0">
+
+                    <h5>
+                        <i class="bi bi-envelope me-2 text-primary"></i>
+                        Contact
+                    </h5>
+
+                    <p>
+                        If you have any questions regarding this privacy policy,
+                        please contact the system administrator.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

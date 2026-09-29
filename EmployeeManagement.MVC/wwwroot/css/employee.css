@@ -1,0 +1,241 @@
+﻿.employees-wrapper {
+    background: #f5f7fb;
+    min-height: calc(100vh - 120px);
+    padding: 30px 0 50px;
+}
+
+/* Header */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+    .page-header h2 {
+        color: #17233c;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .page-header p {
+        color: #778197;
+        margin: 0;
+        font-size: 14px;
+    }
+
+.page-subtitle {
+    color: #315bea;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Add Button */
+
+.add-employee-btn {
+    background: #315bea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 11px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s;
+}
+
+    .add-employee-btn:hover {
+        background: #244bd0;
+        color: white;
+        transform: translateY(-1px);
+    }
+
+/* Employee Card */
+
+.employee-card {
+    background: white;
+    border-radius: 18px;
+    border: 1px solid #edf0f5;
+    box-shadow: 0 5px 20px rgba(25, 42, 70, 0.05);
+    overflow: hidden;
+}
+
+.employee-header {
+    padding: 22px 25px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+    .employee-header h5 {
+        color: #17233c;
+        font-weight: 700;
+        margin-bottom: 4px;
+    }
+
+    .employee-header p {
+        color: #8a94a7;
+        font-size: 13px;
+        margin: 0;
+    }
+
+/* Table */
+
+.table-container {
+    overflow-x: auto;
+}
+
+.employee-table {
+    margin-bottom: 0;
+}
+
+    .employee-table thead th {
+        background: #f8f9fc;
+        color: #667085;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .4px;
+        padding: 15px 20px;
+        border-bottom: 1px solid #edf0f5;
+        white-space: nowrap;
+    }
+
+    .employee-table tbody td {
+        padding: 16px 20px;
+        color: #475467;
+        font-size: 14px;
+        vertical-align: middle;
+        border-bottom: 1px solid #f0f2f6;
+    }
+
+    .employee-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    .employee-table tbody tr:hover {
+        background: #fafbff;
+    }
+
+.employee-name {
+    color: #17233c;
+    font-weight: 600;
+}
+
+/* Status */
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 20px;
+    padding: 5px 11px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-active {
+    background: #e8f8ef;
+    color: #15945a;
+}
+
+.status-inactive {
+    background: #ffe9ec;
+    color: #df3f55;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+/* Action Buttons */
+
+.employee-table .btn {
+    border-radius: 7px;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+/* Modal */
+
+.employee-modal {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+    .employee-modal .modal-header {
+        padding: 20px 24px;
+        border-bottom: 1px solid #edf0f5;
+    }
+
+    .employee-modal .modal-title {
+        color: #17233c;
+        font-weight: 700;
+    }
+
+    .employee-modal .modal-body {
+        padding: 24px;
+    }
+
+    .employee-modal .form-label {
+        color: #475467;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .employee-modal .form-control,
+    .employee-modal .form-select {
+        border: 1px solid #dfe3eb;
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+        .employee-modal .form-control:focus,
+        .employee-modal .form-select:focus {
+            border-color: #315bea;
+            box-shadow: 0 0 0 3px rgba(49, 91, 234, .10);
+        }
+
+    .employee-modal .modal-footer {
+        border-top: 1px solid #edf0f5;
+        padding: 15px 24px;
+    }
+
+.save-employee-btn {
+    background: #315bea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+    .save-employee-btn:hover {
+        background: #244bd0;
+    }
+
+@media (max-width: 768px) {
+
+    .employees-wrapper {
+        padding: 20px 0 40px;
+    }
+
+    .page-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+        .page-header h2 {
+            font-size: 26px;
+        }
+
+    .add-employee-btn {
+        white-space: nowrap;
+    }
+}

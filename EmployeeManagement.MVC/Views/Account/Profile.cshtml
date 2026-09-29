@@ -1,0 +1,249 @@
+﻿@* @model EmployeeManagement.Common.DTOs.ProfileResponseDTO
+
+<h2>User Profile</h2>
+
+<hr />
+
+<p>
+    <strong>User Id :</strong>
+    @Model.UserId
+</p>
+
+<p>
+    <strong>Email :</strong>
+    @Model.Email
+</p>
+
+<p>
+    <strong>Role :</strong>
+    @Model.Role
+</p> *@
+
+@model EmployeeManagement.Common.DTOs.ProfileResponseDTO
+
+@{
+    ViewData["Title"] = "My Profile";
+}
+
+<style>
+    .profile-wrapper {
+        background: #f5f7fb;
+        min-height: calc(100vh - 120px);
+        padding: 40px 0;
+    }
+
+    .profile-card {
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid #edf0f5;
+        box-shadow: 0 8px 25px rgba(25, 42, 70, 0.06);
+        overflow: hidden;
+    }
+
+    .profile-cover {
+        height: 150px;
+        background: linear-gradient(135deg, #315bea, #6c8cff);
+        position: relative;
+    }
+
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: white;
+        border: 5px solid white;
+        position: absolute;
+        bottom: -50px;
+        left: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #315bea;
+        font-size: 42px;
+        box-shadow: 0 5px 15px rgba(0,0,0,.12);
+    }
+
+    .profile-body {
+        padding: 70px 40px 40px;
+    }
+
+    .profile-name {
+        color: #17233c;
+        font-weight: 700;
+        font-size: 26px;
+        margin-bottom: 5px;
+    }
+
+    .profile-subtitle {
+        color: #8a94a7;
+        margin-bottom: 30px;
+    }
+
+    .info-card {
+        background: #f8f9fc;
+        border: 1px solid #edf0f5;
+        border-radius: 14px;
+        padding: 18px;
+        height: 100%;
+    }
+
+    .info-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        background: #e9f0ff;
+        color: #315bea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 19px;
+        margin-bottom: 12px;
+    }
+
+    .info-label {
+        color: #8a94a7;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        margin-bottom: 5px;
+    }
+
+    .info-value {
+        color: #17233c;
+        font-weight: 600;
+        word-break: break-word;
+    }
+
+    .role-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #e9f0ff;
+        color: #315bea;
+        border-radius: 20px;
+        padding: 6px 13px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    @@media (max-width: 768px) {
+        .profile-body {
+            padding: 65px 20px 25px;
+        }
+
+        .profile-avatar {
+            left: 20px;
+        }
+    }
+</style>
+
+
+<div class="profile-wrapper">
+
+    <div class="container">
+
+        <div class="profile-card">
+
+            <!-- Cover -->
+            <div class="profile-cover">
+
+                <div class="profile-avatar">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+
+            </div>
+
+
+            <!-- Profile Body -->
+            <div class="profile-body">
+
+                <h2 class="profile-name">
+                    My Profile
+                </h2>
+
+                <p class="profile-subtitle">
+                    Account information and user details
+                </p>
+
+
+                <div class="row g-4">
+
+                    <!-- User ID -->
+                    <div class="col-md-4">
+
+                        <div class="info-card">
+
+                            <div class="info-icon">
+                                <i class="bi bi-person-badge"></i>
+                            </div>
+
+                            <div class="info-label">
+                                User ID
+                            </div>
+
+                            <div class="info-value">
+                                @Model.UserId
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="col-md-4">
+
+                        <div class="info-card">
+
+                            <div class="info-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+
+                            <div class="info-label">
+                                Email Address
+                            </div>
+
+                            <div class="info-value">
+                                @Model.Email
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Role -->
+                    <div class="col-md-4">
+
+                        <div class="info-card">
+
+                            <div class="info-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+
+                            <div class="info-label">
+                                Role
+                            </div>
+
+                            <div class="info-value">
+
+                                <span class="role-badge">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    @Model.Role
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
